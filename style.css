@@ -1,0 +1,152 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: wheat;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    gap: 12px;
+    /* grid-template-columns: 0.5fr 1.75fr 1.75fr;
+    grid-template-rows: 0.5fr 1.5fr 2fr 0.5fr; */
+    grid-template-areas: 
+        "banner banner banner"
+        "side contact contact"
+        "side left right"
+        "foot foot foot"
+    ;
+}
+
+
+@media only screen and (max-width: 940px) {
+    .grid-container {
+        display: flex;
+    }
+    .banner {
+        width: 100%;
+        height: 10%;
+    }
+    .side { 
+        width: 100%;
+        height: 5%;
+        display: inline !important;
+    }
+    .contact {
+        width: 100%;
+        height: 15%;
+        background: rgba(34, 92, 92, 0.5) !important;
+    }
+    .left-box {
+        width: 100%;
+        height: 25%;
+    }
+    .right-box {
+        width: 100%;
+        height: 25%;
+    }
+    footer {
+        width: 100%;
+        height: 10%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .grid-container {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner {
+        width: 100%;
+        height: 10%;
+    }
+    .side { 
+        width: 100%;
+        height: 5%;
+        display: inline !important;
+    }
+    .contact {
+        width: 100%;
+        height: 15%;
+        background: rgba(34, 92, 92, 0.5) !important;
+    }
+    .left-box {
+        width: 100%;
+        height: 25%;
+    }
+    .right-box {
+        width: 100%;
+        height: 25%;
+    }
+    footer {
+        width: 100%;
+        height: 10%;
+    }
+}
+
+.banner {
+    grid-area: banner;
+    background: rgba(255, 0, 0, 0.2);
+    border: 2px solid black;
+    border-radius: 15% 20px;
+}
+.side {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 255, 0.2);
+    border: 2px solid black;
+    border-radius: 15% 20px;
+}
+.contact {
+    grid-area: contact;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 255, 255, 0.2);
+    border: 2px solid black;
+    border-radius: 15% 20px;
+}
+
+.square {
+    width: 80px;
+    height: 50px;
+    margin: 0 10px;
+    background: rgba(0, 0, 255, 0.2);
+    border: 2px solid black;
+    border-radius: 15% 20px;
+}
+
+.left-box {
+    grid-area: left;
+    background-image: url(/img1.png);
+    background-position: center;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    border: 2px solid black;
+    border-radius: 15% 20px;
+}
+.right-box {
+    grid-area: right;
+    background-image: url(/img2.jpeg);
+    background-position: center;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    border: 2px solid black;
+    border-radius: 15% 20px;
+
+}
+footer {
+    grid-area: foot;
+    background: rgba(53, 80, 215, 0.374);
+    border: 2px solid black;
+    border-radius: 15% 20px;
+}
+

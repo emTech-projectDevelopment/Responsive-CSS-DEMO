@@ -126,7 +126,7 @@ body {
 
 .left-box {
     grid-area: left;
-    background-image: url("/img1.png");
+    background-image: url("img1.png");
     background-position: center;
     background-size: contain;
     /* background-repeat: no-repeat; */
@@ -135,7 +135,7 @@ body {
 }
 .right-box {
     grid-area: right;
-    background-image: url("/img2.jpeg");
+    background-image: url("img2.jpeg");
     background-position: center;
     background-size: contain;
     /* background-repeat: no-repeat; */
